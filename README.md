@@ -40,7 +40,7 @@
 <br>
 <br>
 
-<div align="center">
+<div align="center", href="#актуальность">
   <h1>Актуальность решения задачи</h1>
 </div>
 
