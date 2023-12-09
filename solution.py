@@ -3,6 +3,8 @@ import torch
 import cv2
 import pandas
 import os
+from os import listdir
+from os.path import isfile, join
 
 model = torch.hub.load('ultralytics/yolov5', 'custom', path='weights.pt', force_reload=True)
 
@@ -11,9 +13,6 @@ folder_path = "result"
 # Если папка не существует, создаем ее
 if not os.path.exists(folder_path):
     os.makedirs(folder_path)
-
-from os import listdir
-from os.path import isfile, join
 
 folder_name = "photos"
 mypath = fr"{folder_name}"
