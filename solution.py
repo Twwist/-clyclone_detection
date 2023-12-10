@@ -30,11 +30,13 @@ for file in files:
         if len(labels_2) == 0:
             continue
         for lp in labels_2:
+            if (len(lp) == 0):
+                continue
             try:
                 xmin_pred, ymin_pred, xmax_pred, ymax_pred = lp[0], lp[1], lp[2], lp[3]
                 lx = xmax_pred - xmin_pred
                 ly = ymax_pred - ymin_pred
                 mid = (xmin_pred + lx / 2, ymin_pred + ly / 2)
-                resfile.write(", ".join([str(mid[0]), str(mid[1]), str(lx), str(ly)]) + "\n")
+                resfile.write(", ".join(["0", str(mid[0]), str(mid[1]), str(lx), str(ly)]) + "\n")
             except Exception:
                 continue
