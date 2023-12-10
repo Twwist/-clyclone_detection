@@ -228,6 +228,8 @@ _Примечание_: после перехода по ссылке нужно
 pip install torch
 
 pip install pillow
+
+pip install ultralytics
 ```
 
 </details>
